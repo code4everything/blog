@@ -1,6 +1,6 @@
 ## 一次JSAPI微信支付引发的血案
 
-> 真的很想吐槽一下微信支付的开发文档，很是混乱，硬是要让我们这些刚入门的小白折腾个一天半天才能让人看到那让人激动的支付窗口。就不能写一个完整的文档吗？
+真的很想吐槽一下微信支付的开发文档，很是混乱，硬是要让我们这些刚入门的小白折腾个一天半天才能让人看到那让人激动的支付窗口。就不能写一个完整的文档吗？
 
 ### 准备
 
@@ -10,9 +10,9 @@
 
 ### 后端
 
-这部分内容其实也是很简单的，使用 [weixin-java-tools](https://github.com/Wechat-Group/weixin-java-tools) 工具库即可轻松完成，支付部分的接口可参考 [DEMO](https://github.com/binarywang/weixin-java-pay-demo)
+这部分内容其实也是很简单的，使用 [weixin-java-tools](https://github.com/Wechat-Group/weixin-java-tools) 工具库即可轻松完成，支付部分的接口可参考 [demo](https://github.com/binarywang/weixin-java-pay-demo)
 
-需要引入的Maven包：
+需要引入的 `maven` 包：
 
 ``` xml
 <dependency>
@@ -53,8 +53,6 @@ wxMpService.createJsapiSignature(url);
 wxMpService.oauth2getAccessToken(code);
 ```
 
-> [获取微信网页授权](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140842)
-
 ### 配置
 
 在初始化网页时，我们需要调用 `HTTP` 接口生成签名算法，然后用返回的数据配置微信，并选择需要用到的接口列表
@@ -70,9 +68,11 @@ wx.config({
 })
 ```
 
-> [所有JS接口列表](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115)
+- [查看所有JS接口列表](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115)
 
-然后获取微信网页授权（上面已经给出链接），需要传参重定向页面的 `URL` ，然后用获取到 `code` 调 `HTTP` 接口获取调用凭证（包括 `accessToken` 和 `openId` ）
+- [获取微信网页授权](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140842)
+
+然后获取微信网页授权，需要传参重定向页面的 `URL` ，然后用获取到 `code` 调 `HTTP` 接口获取调用凭证（包括 `accessToken` 和 `openId` ）
 
 ### 支付
 
@@ -96,6 +96,7 @@ import md5 from 'js-md5'
     let nonce = Math.random().toString(36).substr(2)
     // 生成签名
     md5(`appid=${appId}&body=${body}&device_info=WEB&mch_id=${mchId}&nonce_str=${nonce}&key=${key}`).toUpperCase()
+    // 然后调统一下单接口进行统一下单
     ```
     
 2. **弹出微信支付**
