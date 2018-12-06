@@ -27,7 +27,7 @@
 </dependency>
 ```
 
-主要讲一下获取临时票据和调用凭证，这里的接口在配置微信支付的是否是需要调用的，参考代码：
+主要讲一下获取临时票据和调用凭证，这里的接口在配置微信支付的时候需要调用，参考代码：
 
 ``` java
 @Autowired
@@ -57,7 +57,7 @@ wxMpService.oauth2getAccessToken(code);
 
 ### 配置
 
-在初始化网页时，我们需要调用HTTP接口生成签名算法，然后用返回的数据配置微信，并选择需要用到的接口列表
+在初始化网页时，我们需要调用 `HTTP` 接口生成签名算法，然后用返回的数据配置微信，并选择需要用到的接口列表
 
 ``` javascript
 wx.config({
@@ -72,7 +72,7 @@ wx.config({
 
 > [所有JS接口列表](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115)
 
-然后获取微信网页授权（上面已经给出链接），需要传参重定向页面，然后用获取到Code调HTTP接口获取调用凭证（包括accessToken和openId）
+然后获取微信网页授权（上面已经给出链接），需要传参重定向页面的 `URL` ，然后用获取到 `code` 调 `HTTP` 接口获取调用凭证（包括 `accessToken` 和 `openId` ）
 
 ### 支付
 
