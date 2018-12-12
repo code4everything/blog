@@ -12,4 +12,4 @@
     
 - [微信](/wechat)
 
-    - [一次JSAPI微信支付引发的血案](wechat/一次JSAPI微信支付引发的血案.md)
+    - [我的JSSDK微信支付踩坑记录](wechat/我的JSSDK微信支付踩坑记录.md)
