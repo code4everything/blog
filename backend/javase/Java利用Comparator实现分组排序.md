@@ -38,7 +38,6 @@
 2. 准备一些数据，用于测试
 
     ``` java
-    // 准备一些数据，用于测试
     final String classOne = "一班";
     final String classTwo = "二班";
     final String classThree = "三班";
@@ -168,8 +167,10 @@
     
 ### 总结
 
-现在回过去看，原来分组排序如此的简单呀，不过这完全得益于 `Comparator` 的强大（你也完全可以使用 `Comparable` 接口来达到相同的效果）
+现在回过去看，原来分组排序如此的简单呀，不过这完全得益于 `Comparator` 的强大，你也完全可以选择实现 `Comparable` 接口来达到相同的效果。
 
-[本示例源代码参考](/code4everything/demo/blob/master/demo-test/src/main/java/com/zhazhapan/demo/test/SortTest.java)
+当有新的挑战时，我们一定要多思考:facepunch:
+
+[本示例源代码参考](https://github.com/code4everything/demo/blob/master/demo-test/src/main/java/com/zhazhapan/demo/test/SortTest.java)
 
 > 由于本人水平有限，有不正确的地方，还望指正，谢谢
