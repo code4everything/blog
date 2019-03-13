@@ -2,6 +2,12 @@
 
 # 目录
 
+- [基础](basic)
+
+    - [算法](basic/algorithm)
+    
+        - [排序算法性能比较](basic/algorithm/排序算法性能比较.md)
+
 - [前端](frontend)
 
 - [后端](backend)
