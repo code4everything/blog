@@ -2,11 +2,11 @@
 
 # 目录
 
-- [基础](basic)
+- [基础](base)
 
-    - [算法](basic/algorithm)
+    - [算法](base/algorithm)
     
-        - [排序算法性能比较](basic/algorithm/排序算法性能比较.md)
+        - [细数哪些常见的排序算法](base/algorithm/细数哪些常见的排序算法.md)
 
 - [前端](frontend)
 
@@ -15,6 +15,8 @@
 	- [JavaSE基础](backend/javase)
 	
 	    - [Java利用Comparator实现分组排序](/backend/javase/Java利用Comparator实现分组排序.md)
+	    
+        - [并发编程之线程运行的阀门](backend/javase/并发编程之线程运行的阀门.md)
 
 - [全栈](fullstack)
 
